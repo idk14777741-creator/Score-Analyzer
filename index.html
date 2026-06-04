@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="panel">
+      <h1>Score Analyzer</h1>
+      <p>Enter up to 20 numbers or lowkey a T20 score. The app builds a prefix sum array and shows a phase for the chosen range.</p>
+      <div class="input-group">
+        <input id="valueInput" type="number" placeholder="Enter positive number">
+        <button id="addButton">Add Number</button>
+      </div>
+      <div class="status-row">
+        <div><strong>Count:</strong> <span id="count">0</span> / 20</div>
+        <div><strong>Values:</strong> <span id="valueList">[]</span></div>
+      </div>
+      <div class="status-row">
+        <div><strong>Prefix Sum:</strong> <span id="prefixList">[]</span></div>
+      </div>
+      <div class="query-section">
+        <div class="query-panel">
+          <h2>Range Query</h2>
+          <div class="input-row">
+            <label>
+              Start index
+              <input id="startIndex" type="number" placeholder="0">
+            </label>
+            <label>
+              End index
+              <input id="endIndex" type="number" placeholder="0">
+            </label>
+          </div>
+          <button id="calculateButton">Calculate Range</button>
+        </div>
+        <div id="resultCard" class="result-card">Result will appear here.</div>
+      </div>
+      <div class="analysis-section">
+        <div class="phase-avg-panel">
+          <h2>Input desired window size</h2>
+          <div class="input-row">
+              <label>
+                Window size (elements)
+                <input id="desiredWindow" type="number" min="1" placeholder="e.g., 3">
+              </label>
+            </div>
+            <button id="phaseAvgButton">Calculate Window Average</button>
+            <div id="phaseAvgCard" class="phase-avg-card">Window average will appear here.</div>
+        </div>
+        <div class="stats-panel">
+          <h2>Phase Stats</h2>
+          <button id="statsButton">Show Best/Worst/Average</button>
+          <div id="statsCard" class="stats-card">Phase stats will appear here.</div>
+        </div>
+      </div>
+      
+    </section>
+  </main>
+  <div class="made-by">Made by Moonknight ✨</div>
+  <script src="script.js"></script>
+</body>
+</html>
